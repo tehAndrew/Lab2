@@ -12,8 +12,9 @@ import java.awt.*;
  *
  * @see Car
  * @see Movable
- * @author Andreas Palmqvist
  * @author Seif Bourogaa
+ * @author Andreas Palmqvist
+ * @author Simon Lindeberg Skoglund
  */
 public class Saab95 extends Car {
     /**

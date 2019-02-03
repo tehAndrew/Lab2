@@ -14,8 +14,9 @@ import java.awt.*;
  * @see Volvo240
  * @see Movable
  *
- * @author Seif Bourogaa.
- * @author Andreas Palmqvist.
+ * @author Seif Bourogaa
+ * @author Andreas Palmqvist
+ * @author Simon Lindeberg Skoglund
  */
 public abstract class Car implements Movable {
     /**

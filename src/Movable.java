@@ -6,8 +6,9 @@
  *  This interface represents a movable object that can turn in 360 degrees clock-
  *  and counter clock-wise.
  *
- * @author Seif Bourogaa.
- * @author Andreas Palmqvist.
+ * @author Seif Bourogaa
+ * @author Andreas Palmqvist
+ * @author Simon Lindeberg Skoglund
  */
 public interface Movable {
 
