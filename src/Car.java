@@ -60,9 +60,9 @@ public abstract class Car implements Movable {
      * @param nrDoors is the number of doors on the car
      *
      * @param enginePower is the horsepower on the car
-
+     *
      * @param color is the color of the car
-
+     *
      * @param modelName is the model name of the car
      */
     public Car(int nrDoors, double enginePower, Color color, String modelName){

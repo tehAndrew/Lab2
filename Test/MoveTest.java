@@ -1,42 +1,36 @@
-import org.junit.*;
-
-import java.awt.*;
-
+import org.junit.Before;
+import org.junit.Test;
+import java.awt.Color;
 import static org.junit.Assert.assertTrue;
 
 public class MoveTest {
-
     Saab95 saab;
     Volvo240 volvo;
 
     @Before
-    public void init(){
-
+    public void init() {
         saab = new Saab95();
         volvo = new Volvo240();
     }
 
     @Test
-    public void moveWithEngineOff(){
-
+    public void moveWithEngineOff() {
         saab.stopEngine();
         volvo.stopEngine();
         saab.move();
         volvo.move();
-
         assertTrue(saab.getX() == 0 && saab.getY() == 0 && volvo.getX() == 0 && volvo.getY() == 0);
-
     }
 
     @Test
-    public void saabWithTurboOnVsVolvo(){
+    public void saabWithTurboOnVsVolvo() {
         saab.startEngine();
         saab.setTurboOn();
         volvo.startEngine();
-        saab.gas(10);
-        volvo.gas(10);
-        saab.brake(5);
-        volvo.brake(5);
+        saab.gas(1);
+        volvo.gas(1);
+        saab.brake(0.5);
+        volvo.brake(0.5);
         saab.move();
         volvo.move();
 
@@ -44,16 +38,14 @@ public class MoveTest {
     }
 
     @Test
-    public void saabWithTurboOffVsVolvo(){
+    public void saabWithTurboOffVsVolvo() {
         saab.startEngine();
-        saab.stopEngine();
-        volvo.stopEngine();
         saab.setTurboOff();
         volvo.startEngine();
-        saab.gas(10);
-        volvo.gas(10);
-        saab.brake(5);
-        volvo.brake(5);
+        saab.gas(1);
+        volvo.gas(1);
+        saab.brake(0.5);
+        volvo.brake(0.5);
         saab.move();
         volvo.move();
 
@@ -61,7 +53,7 @@ public class MoveTest {
     }
 
     @Test
-    public void turnRightAndBack(){
+    public void turnLeftAndBack() {
         saab.turnLeft(Math.PI);
         volvo.turnLeft(Math.PI);
         saab.turnRight(Math.PI);
@@ -71,32 +63,25 @@ public class MoveTest {
     }
 
     @Test
-    public void saab95Attributes(){
+    public void saab95Attributes() {
         assertTrue(saab.getNrDoors() == 2
-        && saab.getEnginePower() == 125
-        && saab.getColor() == Color.RED
-        && saab.getModelName().equals("Saab95"));
+                && saab.getEnginePower() == 125
+                && saab.getColor() == Color.red
+                && saab.getModelName().equals("Saab95"));
     }
 
     @Test
-    public void volvo240Attributes(){
-        assertTrue(volvo.nrDoors == 4
-        && volvo.getEnginePower() == 100
-        && volvo.getColor() == Color.BLACK
-        && volvo.getModelName().equals("Volvo240"));
-
+    public void volvo240Attributes() {
+        assertTrue(volvo.getNrDoors() == 4
+                && volvo.getEnginePower() == 100
+                && volvo.getColor() == Color.black
+                && volvo.getModelName().equals("Volvo240"));
     }
 
     @Test
-    public void switchColor(){
-
-        saab.setColor(Color.BLACK);
-        volvo.setColor(Color.RED);
-
-        assertTrue(saab.getColor() == Color.BLACK && volvo.getColor() == Color.RED);
+    public void switchCarColor() {
+        saab.setColor(Color.black);
+        volvo.setColor(Color.red);
+        assertTrue(saab.getColor() == Color.black && volvo.getColor() == Color.red);
     }
-
-
-
-
 }
