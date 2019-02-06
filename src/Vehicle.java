@@ -1,4 +1,4 @@
-/* Car.java
+/* Vehicle.java
  * 2019-01-31
  */
 
@@ -18,7 +18,7 @@ import java.awt.*;
  * @author Andreas Palmqvist
  * @author Simon Lindeberg Skoglund
  */
-public abstract class Car implements Movable {
+public abstract class Vehicle implements Movable {
     /**
      *  The x-coordinate of the car.
      */
@@ -65,7 +65,7 @@ public abstract class Car implements Movable {
      *
      * @param modelName is the model name of the car
      */
-    public Car(int nrDoors, double enginePower, Color color, String modelName){
+    public Vehicle(int nrDoors, double enginePower, Color color, String modelName){
         this.nrDoors = nrDoors;
         this.enginePower = enginePower;
         this.color = color;

@@ -16,7 +16,7 @@ import java.awt.*;
  * @author Andreas Palmqvist
  * @author Simon Lindeberg Skoglund
  */
-public class Saab95 extends Car {
+public class Saab95 extends Vehicle {
     /**
      * A toggle which tells whether the turbo is on or off.
      */
