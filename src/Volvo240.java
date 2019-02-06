@@ -9,7 +9,7 @@ import java.awt.*;
  *
  *  The Volvo 240 car has 4 doors, an engine power of 100 and a black chassis.
  *
- * @see Car
+ * @see Vehicle
  * @see Movable
  *
  * @author Seif Bourogaa
@@ -26,7 +26,7 @@ public class Volvo240 extends  Vehicle {
     /**
      *  Constructs a Volvo 240 car which has 4 doors, an engine power of 100 and a black chassis.
      *
-     * @see Car
+     * @see Vehicle
      */
     public Volvo240(){
         super(4, 100, Color.BLACK, "Volvo240");
@@ -48,7 +48,7 @@ public class Volvo240 extends  Vehicle {
      * greater than the engine power of the car then the current speed will always equal the engine power.
      *
      * @param amount the amount to increase the speed by
-     * @see Car
+     * @see Vehicle
      * @see #speedFactor()
      */
     public void incrementSpeed(double amount){
@@ -62,7 +62,7 @@ public class Volvo240 extends  Vehicle {
      * will always be 0.
      *
      * @param amount the amount to decrease the speed by
-     * @see Car
+     * @see Vehicle
      * @see #speedFactor()
      */
     public void decrementSpeed(double amount){

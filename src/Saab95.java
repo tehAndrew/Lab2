@@ -10,7 +10,7 @@ import java.awt.*;
  *
  * The Saab 95 car has two doors, 125 horsepower and has a red chassis.
  *
- * @see Car
+ * @see Vehicle
  * @see Movable
  * @author Seif Bourogaa
  * @author Andreas Palmqvist
@@ -26,7 +26,7 @@ public class Saab95 extends Vehicle {
      * Constructs a Saab 95 car which has two doors, 125 horsepower and has red chassis. The turbo is set to off by
      * default.
      *
-     * @see Car
+     * @see Vehicle
      */
     public Saab95(){
         super(2, 125, Color.red, "Saab95");
@@ -64,7 +64,7 @@ public class Saab95 extends Vehicle {
      * greater than the engine power of the car then the current speed will always equal the engine power.
      *
      * @param amount the amount to increase the speed by.
-     * @see Car
+     * @see Vehicle
      * @see #speedFactor()
      */
     public void incrementSpeed(double amount){
@@ -77,7 +77,7 @@ public class Saab95 extends Vehicle {
      * will always be 0.
      *
      * @param amount the amount to decrease the speed by.
-     * @see Car
+     * @see Vehicle
      * @see #speedFactor()
      */
     public void decrementSpeed(double amount){
