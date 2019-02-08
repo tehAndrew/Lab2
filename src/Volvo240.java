@@ -16,7 +16,7 @@ import java.awt.*;
  * @author Andreas Palmqvist
  * @author Simon Lindeberg Skoglund
  **/
-public class Volvo240 extends  Vehicle {
+public class Volvo240 extends Vehicle {
 
     /**
      *  A constant value that represents the trim factor of the car.
