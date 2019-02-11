@@ -1,33 +1,27 @@
 import java.awt.*;
 
 public class Scania extends Vehicle {
-    private double flatbedAngle;
+    private Ramp flatBed;
 
     public Scania(){
-        super(2, 730, Color.blue, "Scania");
-        flatbedAngle = 0;
-    }
-
-    public double getFlatbedAngle() {
-        return flatbedAngle;
+        super(2, 730, Color.yellow, "Scania", 8.53, 2.44);
+        flatBed = new Ramp(0, 70, 0);
     }
 
     public void raiseFlatbed(double angle) {
-        if (currentSpeed == 0) {
-            flatbedAngle = Math.min(flatbedAngle + angle, 70);
-        }
+        if (getCurrentSpeed() == 0) { flatBed.raise(angle); }
     }
 
     public void lowerFlatbed(double angle) {
-        flatbedAngle = Math.max(flatbedAngle - angle, 0);
+        if (getCurrentSpeed() == 0) { flatBed.lower(angle); }
     }
 
     public double speedFactor(){
-        return flatbedAngle > 0 ? 0 : enginePower * 0.01;
+        return flatBed.isInNeutralPos() ? getEnginePower() * 0.01 : 0;
     }
 
     public void incrementSpeed(double amount){
-        currentSpeed = Math.min(getCurrentSpeed() + speedFactor() * amount, enginePower);
+        currentSpeed = Math.min(getCurrentSpeed() + speedFactor() * amount, getEnginePower());
     }
 
     public void decrementSpeed(double amount) {
