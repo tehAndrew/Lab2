@@ -1,4 +1,2 @@
-# DIT952-lab1
-Laboration 1 till Objekt-orienterad Programmering och Design 2017 (DIT952).
-
-Se Lab1PM.txt samt Lab1del2PM.txt för instruktioner.
+# DIT952-lab2
+Laboration 2 till Objekt-orienterad Programmering och Design 2019 (DIT952).
