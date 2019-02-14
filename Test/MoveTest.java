@@ -1,3 +1,5 @@
+import com.group14.vehicles.Saab95;
+import com.group14.vehicles.Volvo240;
 import org.junit.Before;
 import org.junit.Test;
 import java.awt.Color;
